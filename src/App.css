@@ -380,11 +380,11 @@ body {
   color: #fff;
 }
 
-.card .gains-table .negative {
+.card-after .gains-table .negative {
   color: #fff !important;
 }
 
-.card .gains-realised .negative-large {
+.card-after .gains-realised .negative-large {
   color: #fff;
 }
 
@@ -678,6 +678,23 @@ body {
 @media (max-width: 640px) {
   .main-content {
     padding: 20px 14px 48px;
+  }
+  .page-header {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .how-it-works-wrap {
+    width: 100%;
+  }
+  .how-it-works-popover {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 10px;
+  }
+  .how-it-works-popover::before {
+    display: none;
   }
   .page-title {
     font-size: 22px;
