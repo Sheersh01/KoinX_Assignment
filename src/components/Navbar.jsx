@@ -4,6 +4,7 @@ import logo from "../assets/logo.png";
 
 export default function Navbar() {
   const { darkMode, setDarkMode } = useApp();
+  const isDark = darkMode;
   return (
     <nav className="navbar">
       <div className="navbar-inner">
@@ -13,9 +14,15 @@ export default function Navbar() {
         <button
           className="theme-toggle"
           onClick={() => setDarkMode(!darkMode)}
-          title="Toggle theme"
+          title={isDark ? "Switch to light mode" : "Switch to dark mode"}
+          aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
         >
-          {darkMode ? "☀️" : "🌙"}
+          <span
+            className="material-symbols-rounded theme-toggle-icon"
+            aria-hidden="true"
+          >
+            {isDark ? "light_mode" : "dark_mode"}
+          </span>
         </button>
       </div>
     </nav>
